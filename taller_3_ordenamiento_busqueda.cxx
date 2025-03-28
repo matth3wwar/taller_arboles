@@ -184,10 +184,10 @@ int main(int argc, char *argv[])
   miArbolAVL.inOrdenLista( &inordenAVL );
 
   // TODO #12: Llamar la función que genera el recorrido en inorden del árbol rojinegro y lo guarda en una lista dada como parámetro.
-  miArbolRN.inordenEnLista( inordenRN );
+  //miArbolRN.inordenEnLista( inordenRN );
 
   // TODO #18: Llamar la función que genera el recorrido en inorden del montículo y lo guarda en una lista dada como parámetro.
-  miMonticulo.inordenEnLista( inordenHeap );
+  //miMonticulo.inordenEnLista( inordenHeap );
 
   /*
     ===============================================================
@@ -234,14 +234,20 @@ int main(int argc, char *argv[])
   itRN = inordenRN.begin();
   itH = inordenHeap.begin();
 
+  bool iguales = true;
+
   // Comparar primero tamaños aquí:
 
 
 
   //end comparación tamaños
 
-  for (; itTAVL != inordenAVL.end(); itTAVL++) {
-    if ((inordenAVL->))
+  while (itTAVL != inordenAVL.end()) {
+    if (*itTAVL != *itRN || *itRN != *itH)
+      iguales = false;
+    itTAVL++;
+    itRN++;
+    itH++;
   }
 
   // TODO #21: Informar si los árboles coinciden en la totalidad de los elementos teniendo en cuenta su posición
